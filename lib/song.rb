@@ -6,7 +6,7 @@ class Song
   def self.create
     song = self.new 
     song.save 
-    @@all << song
+   # @@all << song
     song
   end 
   def self.all
@@ -29,7 +29,7 @@ class Song
     self.find_by_name(string_name) || self.create_by_name(string_name)
   end 
   def self.alphabetical
-    @@all.sort_by! { |song| song.name}
+    @@all.sort_by { |song| song.name}
    end 
   def self.new_from_filename(file_name)
     new_song = self.new
