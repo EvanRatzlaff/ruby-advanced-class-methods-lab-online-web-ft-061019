@@ -27,16 +27,8 @@ class Song
      self.all.detect {|song| song.name == find_name}
   end 
   def self.find_or_create_by_name(string_name)
-    did_i_find_it = self.all.detect {|song| song.name == string_name}
-    if did_i_find_it == nil
-      songObj = self.create
-      songObj.name = string_name
-      songObj
-    else
-      did_i_find_it
-    end
-    #self.create_by_name(name)
-    #self.find_by_name(find_name)
+    if self.find_by_name == string_name
+    else self.create_by_name
   end 
   def self.alphabetical
     self.all.sort_by { |song| song.name}
