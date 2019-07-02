@@ -29,7 +29,7 @@ class Song
   def self.find_or_create_by_name(string_name)
     did_i_find_it = self.all.detect {|song| song.name == string_name}
     if did_i_find_it == nil
-      songObj = self.new 
+      songObj = self.create 
       songObj.name = string_name
       songObj.save 
       songObj
