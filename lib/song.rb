@@ -36,6 +36,8 @@ class Song
     else
       did_i_find_it
     end
+    self.create_by_name(name)
+    self.find_by_name(find_name)
   end 
   def self.alphabetical
     self.all.sort_by { |song| song.name}
