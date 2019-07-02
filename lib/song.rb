@@ -31,7 +31,6 @@ class Song
     if did_i_find_it == nil
       songObj = self.create
       songObj.name = string_name
-      songObj.save 
       songObj
     else
       did_i_find_it
