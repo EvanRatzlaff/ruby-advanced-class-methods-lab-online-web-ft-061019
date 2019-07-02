@@ -29,6 +29,7 @@ class Song
   def self.find_or_create_by_name(string_name)
     if self.find_by_name(find_name) == string_name
     else self.create_by_name(name)
+    end
   end 
   def self.alphabetical
     self.all.sort_by { |song| song.name}
